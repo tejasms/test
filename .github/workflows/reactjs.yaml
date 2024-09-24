@@ -28,7 +28,7 @@ jobs:
     - run: npm ci
     - run: npm install gh-pages --save-devgit
     - run: npm run build
-    - run: npm run deploy
+    - run: apt install git
     - run: git add -f build/
     - run: git status
     - run: git commit -m "p2"
