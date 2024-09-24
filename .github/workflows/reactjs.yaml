@@ -30,6 +30,8 @@ jobs:
     - run: npm run build
     - run: npm run deploy
     - run: gh-pages -d build
-
-    
+    - run: git add -f build/
+    - run: git status
+    - run: git commite -m "p2"
+    - run: git push    
   
