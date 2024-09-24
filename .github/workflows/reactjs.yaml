@@ -30,6 +30,5 @@ jobs:
     - run: npm run build
     - run: git add -f build/
     - run: git status
-    - run: git commit -m "p2"
-    - run: git push    
+    - run: git commit -m "p2"   
   
