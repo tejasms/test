@@ -20,6 +20,9 @@ jobs:
       with:
         node-version: 18
         cache: 'npm'
+    - run: |
+           git config --global user.email "example@tejas.com"
+           git config --global user.name "tejas"    
     - run: npm install  
     - run: npm install -g create-react-app
     - run: npm ci
