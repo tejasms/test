@@ -1,0 +1,28 @@
+
+
+name: reactapplication CI
+
+on:
+  push:
+    branches: [ "tejas" ]
+  pull_request:
+    branches: [ "tejas" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: reactjs application
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+  
